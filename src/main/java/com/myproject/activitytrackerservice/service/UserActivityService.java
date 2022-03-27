@@ -1,13 +1,16 @@
-package com.myproject.activitytrackerservice.services;
+package com.myproject.activitytrackerservice.service;
 
 import com.myproject.activitytrackerservice.domain.dto.UserActivityRequest;
 import com.myproject.activitytrackerservice.domain.entity.UserActivity;
-import com.myproject.activitytrackerservice.repositories.UserActivityRepository;
+import com.myproject.activitytrackerservice.repository.UserActivityRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.sql.rowset.serial.SerialClob;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Supplier;
 
 @Service
 @Slf4j
@@ -25,6 +28,11 @@ public class UserActivityService {
         userActivity.setRequestId(userActivityRequest.getRequestId());
         userActivity.setStatus(userActivity.getStatus());
         userActivity.setCreatedDate(userActivityRequest.getCreatedDate());
+    }
+
+    public List<UserActivity> getUserActivity(Long userId) {
+        return userActivityRepository.findByUserIdOrderByCreatedDate(userId)
+                .orElse(new ArrayList<>());
     }
 
 }

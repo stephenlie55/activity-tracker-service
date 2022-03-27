@@ -3,7 +3,7 @@ package com.myproject.activitytrackerservice.jmsClient;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.myproject.activitytrackerservice.domain.dto.UserActivityRequest;
-import com.myproject.activitytrackerservice.services.UserActivityService;
+import com.myproject.activitytrackerservice.service.UserActivityService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.annotation.JmsListener;
