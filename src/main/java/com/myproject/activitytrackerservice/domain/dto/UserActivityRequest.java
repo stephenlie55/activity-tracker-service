@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 public class UserActivityRequest implements Serializable {
     private static final long serialVersionUID = -3261074151511020167L;
 
-    private Long userId;
+    private String phoneNumber;
     private String activityName;
     private String requestId;
     private int status;

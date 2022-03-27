@@ -20,7 +20,7 @@ public class UserActivityService {
     public void saveUserActivity(UserActivityRequest userActivityRequest) throws Exception {
         log.info("Begin save audit trail for request id [{}]", userActivityRequest.getRequestId());
         UserActivity userActivity = new UserActivity();
-        userActivity.setUserId(userActivityRequest.getUserId());
+        userActivity.setPhoneNumber(userActivityRequest.getPhoneNumber());
         userActivity.setActivityName(userActivityRequest.getActivityName());
         userActivity.setJsonRequest(new SerialClob(userActivityRequest.getJsonResponse().toCharArray()));
         userActivity.setJsonResponse(new SerialClob(userActivityRequest.getJsonResponse().toCharArray()));
