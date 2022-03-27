@@ -29,8 +29,8 @@ public class UserActivityService {
         userActivity.setCreatedDate(userActivityRequest.getCreatedDate());
     }
 
-    public List<UserActivity> getUserActivity(Long userId) {
-        return userActivityRepository.findByUserIdOrderByCreatedDate(userId)
+    public List<UserActivity> getUserActivity(String phoneNumber) {
+        return userActivityRepository.findByPhoneNumberOrderByCreatedDate(phoneNumber)
                 .orElse(new ArrayList<>());
     }
 

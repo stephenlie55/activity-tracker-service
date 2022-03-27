@@ -25,9 +25,9 @@ public class ActivityTrackerController {
     @ApiOperation(value = "get user IgnoreCase by UserAuthentication.getUserIgnoreCase.username")
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
-    @GetMapping(value = "/{userId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<UserActivity> getUserActivity(@PathVariable String userId, HttpServletRequest request, HttpServletResponse response) {
-        log.info("Inside method getUserActivity with parameter {}", userId);
-        return userActivityService.getUserActivity(Long.valueOf(userId));
+    @GetMapping(value = "/{phoneNumber}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<UserActivity> getUserActivity(@PathVariable String phoneNumber, HttpServletRequest request, HttpServletResponse response) {
+        log.info("Inside method getUserActivity with parameter {}", phoneNumber);
+        return userActivityService.getUserActivity(phoneNumber);
     }
 }
