@@ -12,7 +12,7 @@
 	<artifactId>activitytrackerservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>activitytrackerservice</name>
-	<description>Demo project for Spring Boot</description>
+	<description>micro service for tracking user activity</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
