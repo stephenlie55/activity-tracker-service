@@ -24,8 +24,8 @@ public class UserActivity implements Serializable {
     @Column(name = "ID", length = 20)
     private Long id;
 
-    @Column(name = "USER_ID", length = 19)
-    private Long userId;
+    @Column(name = "PHONE_NUMBER", length = 19)
+    private String phoneNumber;
 
     @Column(name = "ACTIVITY_NAME", length = 50)
     private String activityName;
